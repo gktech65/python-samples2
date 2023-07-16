@@ -1,0 +1,133 @@
+(1)
+# Write a program to find the largest among three numbers
+x=int(input())
+y=int(input())
+z=int(input())
+if(x>y and x>z):
+  print(x)
+elif (y>x and y>z):
+  print(y)
+else:
+  print(z)
+
+(2)
+# Write a program to find sum of digits of a numberen numbers till : "
+n=int(input("Enter a number:"))
+count=0
+while(n>0):
+    dig=n%10
+    count=count+dig
+    n=n//10
+print("The total sum of digits is:",count)
+
+(3)
+#Write a Python program to find the sum of even numbers from N given numbers
+x= int(input("Print sum of even numbers till : "))
+count = 0
+for i in range(1, x + 1):
+
+    if((i % 2) == 0):
+       count =count + i
+
+print("\nSum of even numbers from 1 to", x, "is :",count
+
+(4)
+# Write a program to remove all vowels from a given string
+string = input("Enter any string: ")
+if string == 'x':
+    exit();
+else:
+    newstr = string;
+    vowels = ('a', 'e', 'i', 'o', 'u');
+    for x in string.lower():
+        if x in vowels:
+            newstr = newstr.replace(x,"");
+    print("New string after removing all the vowels:");
+    print(newstr);
+
+(5)
+#Write a program to perform the following operations on a given String 
+# a) Convert all small letters in a string into capital letters
+# b) find the number of occurences of a given substring 
+def capital(s):
+  r=s.upper()
+  print(r)
+
+def occur(s,s1):
+  c=s.count(s1)
+  print("Substring",s1,"occurs",c,"times in string:",s)
+
+s=input()
+s1= input()
+capital(s)
+occur(s,s1)
+
+(6)
+# Write a program to sort a list of names in alphabetical order and print the sorted list in uppercase
+l=eval(input())
+l.sort()
+for i in range(len(l)):
+  print(l[i].upper()
+
+(7)
+# Write a program to find the quadrant of a given point
+X  = int(input('Enter value for X-axis :'))
+Y = int(input('Enter value for Y-axis :'))
+
+if X > 0 and Y > 0:
+    print('X and Y lie at First quadrant')
+
+elif X < 0 and Y > 0:
+    print('X and Y lie at Second quadrant')
+
+elif X < 0 and Y < 0:
+    print('X and Y lie at Third quadrant')
+
+elif X > 0 and Y < 0:
+    print('X and Y lie at Fourth quadrant')
+else: 
+    print('X and Y lie at Origin')
+
+(8)
+# Write a menu driven program to calculate araea of circle, triangle, rectangle and square.
+def circle():
+  r = float(input("Radius: "))
+  print("Area: ",pi*r*r)
+
+def square():
+  s = float(input("Side: "))
+  print("Area: ",s*s)
+
+def triangle():
+  h = float(input("Height: "))
+  b = float(input("Base: "))
+  print("Area: ",b*h*.5)
+
+def rectangle():
+  l = float(input("Length: "))
+  b = float(input("Breadth: "))
+  print("Area: ",b*l)
+
+def invalid():
+  print("Invalid Option")
+
+
+options = {
+  "1":circle,
+  "2":triangle,
+  "3":rectangle,
+  "4":square,
+  "5":quit
+}
+
+while True:
+  print("""
+  Enter option:
+  1. Circle
+  2. Triangle
+  3. Rectangle
+  4. Square
+  5. Quit
+  """)
+  opt = input()
+  options.get(opt,invalid)()
